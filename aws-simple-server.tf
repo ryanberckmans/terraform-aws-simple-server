@@ -47,6 +47,8 @@ resource "aws_security_group" "public_server" {
 }
 
 resource "aws_instance" "public_server" {
+  # See https://cloud-images.ubuntu.com/locator/ec2/
+  # "ami-ddf13fb0" is Ubuntu 16.04 LTS in us-east-1 hvm:ebs-ssd (i.e. hardware virtual machine on elastic block store)
   ami           = "ami-ddf13fb0"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.public_server.id}"]
