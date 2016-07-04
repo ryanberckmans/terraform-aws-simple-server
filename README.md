@@ -6,14 +6,15 @@ Example Terraform configuration to create a single ec2 server with a public ip, 
 
 1. `brew cask install terraform`
 1. create an AWS account
-1. create [`~/.aws/credentials`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) from AWS IAM User guide. [Don't use root/master access keys](use keys for an IAM user which is assigned to an IAM group which has a policy to do these actions.) from your AWS account; use keys for an IAM user which is assigned to an IAM group which has a policy to do these actions.
+1. create [`~/.aws/credentials`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) from AWS IAM User guide. [Don't use root/master access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) from your AWS account; use keys for an IAM user which is assigned to an IAM group which has a policy to do these actions.
 4. create a local ssh key using `ssh-keygen` if you haven't already
 
 # Run
 
-1. `git clone git@github.com:ryanberckmans/terraform-aws-simple-server.git && cd terraform-aws-simple-server`
-1. `TF_VAR_public_server_ssh_public_key=\`cat ~/.ssh/id_rsa.pub\` terraform plan`
-1. to actually create the server replace "plan" with "apply"
+1. `git clone git@github.com:ryanberckmans/terraform-aws-simple-server.git`
+1. `cd terraform-aws-simple-server`
+1. ``TF_VAR_public_server_ssh_public_key=`cat ~/.ssh/id_rsa.pub` terraform plan``
+1. to actually create the server replace `plan` with `apply`
 
 # Verify
 
