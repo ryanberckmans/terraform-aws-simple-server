@@ -1,6 +1,6 @@
 # terraform-aws-simple-server
 
-Example Terraform configuration to create a single ec2 server with a public ip, ssh, and ping.
+Example [Terraform](https://www.terraform.io/) configuration to create a single ec2 server with a public ip, ssh, and ping.
 
 # Setup
 
